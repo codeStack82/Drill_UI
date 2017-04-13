@@ -7,22 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Drill_UI;
 
-namespace Drill_UI
+namespace Drill_UI.App_Controls
 {
-    public partial class pnl_Default : UserControl
+    public partial class pnl_Flow : UserControl
     {
-        public pnl_Default()
+        public pnl_Flow()
         {
             InitializeComponent();
-            
         }
-
-        private void pnl_Default_Load(object sender, EventArgs e)
-        {
-            
-        }
-
     }
 }

@@ -8,3 +8,5 @@ c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debu
 c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.pdb
 c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.frm_Main.resources
 c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.pnl_Default.resources
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.App_Controls.pnl_Flow.resources
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.App_Forms.frm_About.resources

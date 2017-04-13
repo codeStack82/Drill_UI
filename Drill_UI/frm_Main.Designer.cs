@@ -421,6 +421,7 @@
             this.aboutOpsViewToolStripMenuItem.Name = "aboutOpsViewToolStripMenuItem";
             this.aboutOpsViewToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.aboutOpsViewToolStripMenuItem.Text = "About OpsView";
+            this.aboutOpsViewToolStripMenuItem.Click += new System.EventHandler(this.aboutOpsViewToolStripMenuItem_Click);
             // 
             // frm_Main
             // 
@@ -436,6 +437,7 @@
             this.MainMenuStrip = this.mnu_Main;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OpsView";
             this.mnu_Main.ResumeLayout(false);
             this.mnu_Main.PerformLayout();
