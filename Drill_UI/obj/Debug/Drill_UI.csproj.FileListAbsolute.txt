@@ -1,0 +1,10 @@
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\bin\Debug\Drill_UI.exe.config
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\bin\Debug\Drill_UI.exe
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\bin\Debug\Drill_UI.pdb
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.csprojResolveAssemblyReference.cache
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.Properties.Resources.resources
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.csproj.GenerateResource.Cache
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.exe
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.pdb
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.frm_Main.resources
+c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.pnl_Default.resources
