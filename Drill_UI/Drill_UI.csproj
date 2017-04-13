@@ -116,6 +116,10 @@
     <Folder Include="App_Data\" />
     <Folder Include="App_Images\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Files\Admin.txt" />
+    <Content Include="App_Files\Users.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

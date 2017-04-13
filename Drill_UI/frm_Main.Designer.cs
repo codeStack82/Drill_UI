@@ -65,14 +65,18 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Main = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.ss_Main = new System.Windows.Forms.StatusStrip();
             this.pnl_Left = new System.Windows.Forms.Panel();
             this.pnl_TopMain = new System.Windows.Forms.Panel();
             this.mnu_Add_Remove_Users = new System.Windows.Forms.ToolStripMenuItem();
             this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutOpsViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnl_LeftHeader = new System.Windows.Forms.Panel();
+            this.pnl_MainHeader = new System.Windows.Forms.Panel();
             this.mnu_Main.SuspendLayout();
+            this.pnl_Main.SuspendLayout();
+            this.pnl_Left.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnu_Main
@@ -359,41 +363,46 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_Main.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_Main.Location = new System.Drawing.Point(161, 67);
+            this.pnl_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Main.Controls.Add(this.pnl_MainHeader);
+            this.pnl_Main.Location = new System.Drawing.Point(95, 67);
             this.pnl_Main.Name = "pnl_Main";
             this.pnl_Main.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_Main.Size = new System.Drawing.Size(1071, 489);
+            this.pnl_Main.Size = new System.Drawing.Size(1133, 489);
             this.pnl_Main.TabIndex = 2;
             // 
-            // statusStrip1
+            // ss_Main
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 560);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1232, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
+            this.ss_Main.Location = new System.Drawing.Point(0, 560);
+            this.ss_Main.Name = "ss_Main";
+            this.ss_Main.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.ss_Main.Size = new System.Drawing.Size(1232, 22);
+            this.ss_Main.TabIndex = 3;
+            this.ss_Main.Text = "statusStrip1";
             // 
             // pnl_Left
             // 
             this.pnl_Left.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_Left.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_Left.Location = new System.Drawing.Point(0, 67);
+            this.pnl_Left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Left.Controls.Add(this.pnl_LeftHeader);
+            this.pnl_Left.Location = new System.Drawing.Point(4, 67);
             this.pnl_Left.Name = "pnl_Left";
             this.pnl_Left.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_Left.Size = new System.Drawing.Size(155, 489);
+            this.pnl_Left.Size = new System.Drawing.Size(85, 489);
             this.pnl_Left.TabIndex = 4;
             // 
             // pnl_TopMain
             // 
             this.pnl_TopMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_TopMain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_TopMain.Location = new System.Drawing.Point(0, 27);
+            this.pnl_TopMain.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_TopMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_TopMain.Location = new System.Drawing.Point(4, 27);
             this.pnl_TopMain.Name = "pnl_TopMain";
             this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_TopMain.Size = new System.Drawing.Size(1232, 34);
+            this.pnl_TopMain.Size = new System.Drawing.Size(1224, 35);
             this.pnl_TopMain.TabIndex = 5;
             // 
             // mnu_Add_Remove_Users
@@ -423,6 +432,24 @@
             this.aboutOpsViewToolStripMenuItem.Text = "About OpsView";
             this.aboutOpsViewToolStripMenuItem.Click += new System.EventHandler(this.aboutOpsViewToolStripMenuItem_Click);
             // 
+            // pnl_LeftHeader
+            // 
+            this.pnl_LeftHeader.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pnl_LeftHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_LeftHeader.Location = new System.Drawing.Point(3, 3);
+            this.pnl_LeftHeader.Name = "pnl_LeftHeader";
+            this.pnl_LeftHeader.Size = new System.Drawing.Size(77, 35);
+            this.pnl_LeftHeader.TabIndex = 0;
+            // 
+            // pnl_MainHeader
+            // 
+            this.pnl_MainHeader.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pnl_MainHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_MainHeader.Location = new System.Drawing.Point(3, 3);
+            this.pnl_MainHeader.Name = "pnl_MainHeader";
+            this.pnl_MainHeader.Size = new System.Drawing.Size(1125, 35);
+            this.pnl_MainHeader.TabIndex = 1;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -431,7 +458,7 @@
             this.Controls.Add(this.pnl_TopMain);
             this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.pnl_Left);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.ss_Main);
             this.Controls.Add(this.mnu_Main);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.mnu_Main;
@@ -441,6 +468,8 @@
             this.Text = "OpsView";
             this.mnu_Main.ResumeLayout(false);
             this.mnu_Main.PerformLayout();
+            this.pnl_Main.ResumeLayout(false);
+            this.pnl_Left.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,7 +507,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Panel pnl_Main;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip ss_Main;
         private System.Windows.Forms.Panel pnl_Left;
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
@@ -490,6 +519,8 @@
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutOpsViewToolStripMenuItem;
+        private System.Windows.Forms.Panel pnl_MainHeader;
+        private System.Windows.Forms.Panel pnl_LeftHeader;
     }
 }
 
