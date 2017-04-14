@@ -466,7 +466,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::Drill_UI.Properties.Resources.settings_3;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 832);
             this.panel1.Name = "panel1";

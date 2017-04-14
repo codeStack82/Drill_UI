@@ -48,9 +48,9 @@
   <ItemGroup>
     <Compile Include="APP_Classes\Casing.cs" />
     <Compile Include="APP_Classes\Comment.cs" />
+    <Compile Include="APP_Classes\PanelsUtility.cs" />
     <Compile Include="APP_Classes\Surveys.cs" />
     <Compile Include="APP_Classes\User.cs" />
-    <Compile Include="APP_Classes\Well.cs" />
     <Compile Include="APP_Classes\Wellbore.cs" />
     <Compile Include="App_Controls\pnl_Flow.cs">
       <SubType>UserControl</SubType>
@@ -92,18 +92,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -115,12 +115,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="App_Images\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Files\Admin.txt" />
-    <Content Include="App_Files\Users.txt" />
-    <None Include="Resources\settings-3.png" />
+    <Content Include="Resources\Admin.txt" />
+    <Content Include="Resources\Users.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
