@@ -1,6 +1,6 @@
 ﻿namespace Drill_UI
 {
-    partial class frm_Main
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.mnu_Main = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +53,9 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.volumesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,17 +71,12 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutOpsViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnl_Main = new System.Windows.Forms.Panel();
-            this.pnl_MainHeader = new System.Windows.Forms.Panel();
             this.ss_Main = new System.Windows.Forms.StatusStrip();
             this.pnl_Left = new System.Windows.Forms.Panel();
-            this.pnl_TopMain = new System.Windows.Forms.Panel();
-            this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.volumesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_TopMain = new System.Windows.Forms.Panel();
+            this.pnl_Main = new System.Windows.Forms.FlowLayoutPanel();
             this.mnu_Main.SuspendLayout();
-            this.pnl_Main.SuspendLayout();
             this.pnl_Left.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +93,7 @@
             this.mnu_Main.Location = new System.Drawing.Point(0, 0);
             this.mnu_Main.Name = "mnu_Main";
             this.mnu_Main.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
-            this.mnu_Main.Size = new System.Drawing.Size(1771, 24);
+            this.mnu_Main.Size = new System.Drawing.Size(1929, 24);
             this.mnu_Main.TabIndex = 1;
             this.mnu_Main.Text = "menuStrip1";
             // 
@@ -275,25 +273,46 @@
             // importToolStripMenuItem
             // 
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.exportToolStripMenuItem.Text = "Export";
+            // 
+            // calculateToolStripMenuItem
+            // 
+            this.calculateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.volumesToolStripMenuItem,
+            this.timesToolStripMenuItem});
+            this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.calculateToolStripMenuItem.Text = "Calculate";
+            // 
+            // volumesToolStripMenuItem
+            // 
+            this.volumesToolStripMenuItem.Name = "volumesToolStripMenuItem";
+            this.volumesToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.volumesToolStripMenuItem.Text = "Volumes";
+            // 
+            // timesToolStripMenuItem
+            // 
+            this.timesToolStripMenuItem.Name = "timesToolStripMenuItem";
+            this.timesToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.timesToolStripMenuItem.Text = "Times";
             // 
             // customizeToolStripMenuItem
             // 
             this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
-            this.customizeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.customizeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.customizeToolStripMenuItem.Text = "&Customize";
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // adminToolStripMenuItem
@@ -388,34 +407,12 @@
             this.aboutOpsViewToolStripMenuItem.Text = "About OpsView";
             this.aboutOpsViewToolStripMenuItem.Click += new System.EventHandler(this.aboutOpsViewToolStripMenuItem_Click);
             // 
-            // pnl_Main
-            // 
-            this.pnl_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_Main.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_Main.Controls.Add(this.pnl_MainHeader);
-            this.pnl_Main.Location = new System.Drawing.Point(59, 73);
-            this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(1708, 887);
-            this.pnl_Main.TabIndex = 2;
-            // 
-            // pnl_MainHeader
-            // 
-            this.pnl_MainHeader.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_MainHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_MainHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnl_MainHeader.Name = "pnl_MainHeader";
-            this.pnl_MainHeader.Size = new System.Drawing.Size(1706, 35);
-            this.pnl_MainHeader.TabIndex = 1;
-            // 
             // ss_Main
             // 
             this.ss_Main.Location = new System.Drawing.Point(0, 964);
             this.ss_Main.Name = "ss_Main";
             this.ss_Main.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.ss_Main.Size = new System.Drawing.Size(1771, 22);
+            this.ss_Main.Size = new System.Drawing.Size(1929, 22);
             this.ss_Main.TabIndex = 3;
             this.ss_Main.Text = "statusStrip1";
             // 
@@ -423,61 +420,52 @@
             // 
             this.pnl_Left.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.pnl_Left.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_Left.BackColor = System.Drawing.Color.White;
             this.pnl_Left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Left.Controls.Add(this.panel1);
-            this.pnl_Left.Location = new System.Drawing.Point(4, 74);
+            this.pnl_Left.Location = new System.Drawing.Point(4, 27);
             this.pnl_Left.Name = "pnl_Left";
-            this.pnl_Left.Size = new System.Drawing.Size(50, 886);
+            this.pnl_Left.Size = new System.Drawing.Size(200, 933);
             this.pnl_Left.TabIndex = 4;
-            // 
-            // pnl_TopMain
-            // 
-            this.pnl_TopMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_TopMain.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_TopMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_TopMain.Location = new System.Drawing.Point(4, 27);
-            this.pnl_TopMain.Name = "pnl_TopMain";
-            this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_TopMain.Size = new System.Drawing.Size(1763, 40);
-            this.pnl_TopMain.TabIndex = 5;
-            // 
-            // calculateToolStripMenuItem
-            // 
-            this.calculateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.volumesToolStripMenuItem,
-            this.timesToolStripMenuItem});
-            this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.calculateToolStripMenuItem.Text = "Calculate";
-            // 
-            // volumesToolStripMenuItem
-            // 
-            this.volumesToolStripMenuItem.Name = "volumesToolStripMenuItem";
-            this.volumesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.volumesToolStripMenuItem.Text = "Volumes";
-            // 
-            // timesToolStripMenuItem
-            // 
-            this.timesToolStripMenuItem.Name = "timesToolStripMenuItem";
-            this.timesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.timesToolStripMenuItem.Text = "Times";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 832);
+            this.panel1.Location = new System.Drawing.Point(0, 879);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(48, 52);
+            this.panel1.Size = new System.Drawing.Size(198, 52);
             this.panel1.TabIndex = 0;
             // 
-            // frm_Main
+            // pnl_TopMain
+            // 
+            this.pnl_TopMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_TopMain.BackColor = System.Drawing.Color.White;
+            this.pnl_TopMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_TopMain.Location = new System.Drawing.Point(210, 27);
+            this.pnl_TopMain.Name = "pnl_TopMain";
+            this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
+            this.pnl_TopMain.Size = new System.Drawing.Size(1715, 40);
+            this.pnl_TopMain.TabIndex = 5;
+            // 
+            // pnl_Main
+            // 
+            this.pnl_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_Main.BackColor = System.Drawing.Color.Silver;
+            this.pnl_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Main.Location = new System.Drawing.Point(210, 74);
+            this.pnl_Main.Name = "pnl_Main";
+            this.pnl_Main.Size = new System.Drawing.Size(1715, 885);
+            this.pnl_Main.TabIndex = 6;
+            // 
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1771, 986);
+            this.ClientSize = new System.Drawing.Size(1929, 986);
             this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.pnl_Left);
             this.Controls.Add(this.ss_Main);
@@ -486,13 +474,12 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.mnu_Main;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frm_Main";
+            this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OpsView";
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.mnu_Main.ResumeLayout(false);
             this.mnu_Main.PerformLayout();
-            this.pnl_Main.ResumeLayout(false);
             this.pnl_Left.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -530,7 +517,6 @@
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Panel pnl_Main;
         private System.Windows.Forms.StatusStrip ss_Main;
         private System.Windows.Forms.Panel pnl_Left;
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
@@ -543,11 +529,11 @@
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutOpsViewToolStripMenuItem;
-        private System.Windows.Forms.Panel pnl_MainHeader;
         private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem volumesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timesToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel pnl_Main;
     }
 }
 

@@ -48,47 +48,29 @@
   <ItemGroup>
     <Compile Include="APP_Classes\Casing.cs" />
     <Compile Include="APP_Classes\Comment.cs" />
-    <Compile Include="APP_Classes\PanelsUtility.cs" />
+    <Compile Include="APP_Classes\PanelUtility.cs" />
     <Compile Include="APP_Classes\Surveys.cs" />
     <Compile Include="APP_Classes\User.cs" />
     <Compile Include="APP_Classes\Wellbore.cs" />
-    <Compile Include="App_Controls\pnl_Flow.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="App_Controls\pnl_Flow.Designer.cs">
-      <DependentUpon>pnl_Flow.cs</DependentUpon>
-    </Compile>
     <Compile Include="App_Forms\frm_About.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="App_Forms\frm_About.Designer.cs">
       <DependentUpon>frm_About.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Main.cs">
+    <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Main.Designer.cs">
-      <DependentUpon>frm_Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="App_Controls\pnl_Default.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="App_Controls\pnl_Default.Designer.cs">
-      <DependentUpon>pnl_Default.cs</DependentUpon>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="App_Controls\pnl_Flow.resx">
-      <DependentUpon>pnl_Flow.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\frm_About.resx">
       <DependentUpon>frm_About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Main.resx">
-      <DependentUpon>frm_Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="App_Controls\pnl_Default.resx">
-      <DependentUpon>pnl_Default.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
