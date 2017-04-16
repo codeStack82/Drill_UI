@@ -93,7 +93,7 @@
             this.mnu_Main.Location = new System.Drawing.Point(0, 0);
             this.mnu_Main.Name = "mnu_Main";
             this.mnu_Main.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
-            this.mnu_Main.Size = new System.Drawing.Size(1929, 24);
+            this.mnu_Main.Size = new System.Drawing.Size(1794, 24);
             this.mnu_Main.TabIndex = 1;
             this.mnu_Main.Text = "menuStrip1";
             // 
@@ -409,10 +409,10 @@
             // 
             // ss_Main
             // 
-            this.ss_Main.Location = new System.Drawing.Point(0, 964);
+            this.ss_Main.Location = new System.Drawing.Point(0, 1240);
             this.ss_Main.Name = "ss_Main";
             this.ss_Main.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.ss_Main.Size = new System.Drawing.Size(1929, 22);
+            this.ss_Main.Size = new System.Drawing.Size(1794, 22);
             this.ss_Main.TabIndex = 3;
             this.ss_Main.Text = "statusStrip1";
             // 
@@ -425,14 +425,14 @@
             this.pnl_Left.Controls.Add(this.panel1);
             this.pnl_Left.Location = new System.Drawing.Point(4, 27);
             this.pnl_Left.Name = "pnl_Left";
-            this.pnl_Left.Size = new System.Drawing.Size(200, 933);
+            this.pnl_Left.Size = new System.Drawing.Size(200, 1209);
             this.pnl_Left.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 879);
+            this.panel1.Location = new System.Drawing.Point(0, 1155);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(198, 52);
             this.panel1.TabIndex = 0;
@@ -446,7 +446,7 @@
             this.pnl_TopMain.Location = new System.Drawing.Point(210, 27);
             this.pnl_TopMain.Name = "pnl_TopMain";
             this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_TopMain.Size = new System.Drawing.Size(1715, 40);
+            this.pnl_TopMain.Size = new System.Drawing.Size(1580, 40);
             this.pnl_TopMain.TabIndex = 5;
             // 
             // pnl_Main
@@ -454,18 +454,20 @@
             this.pnl_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_Main.AutoScroll = true;
             this.pnl_Main.BackColor = System.Drawing.Color.Silver;
             this.pnl_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Main.Location = new System.Drawing.Point(210, 74);
             this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(1715, 885);
+            this.pnl_Main.Size = new System.Drawing.Size(1580, 1161);
             this.pnl_Main.TabIndex = 6;
+            this.pnl_Main.MouseEnter += new System.EventHandler(this.pnl_Main_MouseEnter);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1929, 986);
+            this.ClientSize = new System.Drawing.Size(1794, 1262);
             this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.pnl_Left);
             this.Controls.Add(this.ss_Main);

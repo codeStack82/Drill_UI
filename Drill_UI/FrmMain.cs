@@ -25,8 +25,8 @@ namespace Drill_UI
         //Form Load  method
         private void frm_Main_Load(object sender, EventArgs e)
         {
-            var wellList = new List<string>() {"FAITH-TORO DIM M4H", "Well 2", "Well 3", "Well 4", "Well 5", "Well 6", "Well 7" };
-            var distList = new List<string>() { "EASTERN GULF COAST", "District 2", "District 3", "District 4", "District 5", "District 6", "District 7" };
+            var wellList = new List<string>() {"FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H" };
+            var distList = new List<string>() { "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST" };
 
             for (var i = 0; i < wellList.Count; ++i)
             {
@@ -36,9 +36,8 @@ namespace Drill_UI
                 {
                     Name = "wellPanel" + wellList[i] ,
                     BackColor = SystemColors.ControlLightLight,
-                    AutoScroll = true,
                     BorderStyle = BorderStyle.FixedSingle,
-                    Size = new Size(775, 500),
+                    Size = new Size(500, 400),
                     Enabled = true,
                     Visible = true
                 };
@@ -62,9 +61,9 @@ namespace Drill_UI
                 {
                     Name = "lbl_" + wellList[i],
                     Text = wellList[i],
-                    Width = 220,
+                    Width = 175,
                     ForeColor = SystemColors.ControlLightLight,
-                    Location = new Point(250, 5)
+                    Location = new Point(330, 5)
                 };
 
                 var distlabel = new Label()
@@ -82,20 +81,13 @@ namespace Drill_UI
 
                 //Add all panel to the well panel
                 wellPanel.Controls.Add(topPanel);
-
+                wellPanel.Paint += DropShadow;
 
                 //Add well panel to main flow panel
                 this.pnl_Main.Controls.Add(wellPanel);
             }
           
         }
-
-
-        private void setWellPanels(string wellName)
-        {
-
-        }
-
 
 
         //Menu - Exit Button
@@ -114,13 +106,12 @@ namespace Drill_UI
         }
 
         //Drop Shadow method
-            //TODO: Test drop shadow function more....?
-        private void dropShadow(object sender, PaintEventArgs e)
+        private static void DropShadow(object sender, PaintEventArgs e)
         {
             Panel panel = (Panel)sender;
             Color[] shadow = new Color[3];
-            shadow[0] = Color.FromArgb(181, 181, 181);
-            shadow[1] = Color.FromArgb(195, 195, 195);
+            shadow[0] = Color.FromArgb(211, 211, 211);
+            shadow[1] = Color.FromArgb(211, 211, 211);
             shadow[2] = Color.FromArgb(211, 211, 211);
             Pen pen = new Pen(shadow[0]);
             using (pen)
@@ -139,6 +130,10 @@ namespace Drill_UI
             }
         }
 
-        
+        //Enable flowpanel focus when enter to allow scrolling with mouse
+        private void pnl_Main_MouseEnter(object sender, EventArgs e)
+        {
+            pnl_Main.Focus();
+        }
     }
 }
