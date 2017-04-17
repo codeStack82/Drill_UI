@@ -25,13 +25,26 @@ namespace Drill_UI
         //Form Load  method
         private void frm_Main_Load(object sender, EventArgs e)
         {
+
             //Dark Theme Color List
             var main = Color.FromArgb(33, 33, 33);
             var mainBc = Color.FromArgb(48, 48, 48);
             var gridBc = Color.FromArgb(30,120,175);
             var smallGridBc = Color.FromArgb(240, 240, 240);
-            var darkText = Color.FromArgb(66,66,66);
+            var flowPanel= Color.FromArgb(66,66,66);
             var lightText = Color.FromArgb(240,240,240);
+
+            //Create Flow Panel
+            var gridPanel = new FlowLayoutPanel()
+            {
+                Name = "pnl_FlowMain",
+                BackColor = flowPanel,
+                BorderStyle = BorderStyle.FixedSingle,
+                Dock = DockStyle.Fill,
+                Visible = true
+            };
+            //Add grid panel
+            this.panelMain.Controls.Add(gridPanel);
 
 
             var wellList = new List<string>() {"FAITH-TORO DIM M5H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H" };
@@ -46,25 +59,24 @@ namespace Drill_UI
                     Name = "wellPanel" + wellList[i] ,
                     BackColor = smallGridBc,
                     BorderStyle = BorderStyle.FixedSingle,
-                    Size = new Size(2500, 2000),
+                    Size = new Size(500, 500),
                     Enabled = true,
                     Visible = true
                 };
 
-                //var topPanel = new Panel()
-                //{
-                //    Name = "topPanel" + wellList[i],
-                //    BackColor = gridBc,
-                //    Dock = DockStyle.Top,
-                //    Height = 30,
-                //    ForeColor = lightText,
-                //    BorderStyle = BorderStyle.FixedSingle,
-                //    Padding = new Padding(5),
-                //    Margin = new Padding(5),
-                //    Enabled = true,
-                //    Visible = true
-                //};
-
+                var topPanel = new Panel()
+                {
+                    Name = "topPanel" + wellList[i],
+                    BackColor = gridBc,
+                    Dock = DockStyle.Top,
+                    Height = 30,
+                    ForeColor = lightText,
+                    BorderStyle = BorderStyle.FixedSingle,
+                    Padding = new Padding(5),
+                    Margin = new Padding(5),
+                    Enabled = true,
+                    Visible = true
+                };
 
                 //Create well panel components
                 var welllabel = new Label()
@@ -84,26 +96,26 @@ namespace Drill_UI
                     ForeColor = lightText,
                     Location = new Point(5, 5)
                 };
-                var dataWatcher = new WebBrowser()
-                {
-                    Dock = DockStyle.Fill,
-                    Url = new System.Uri("http://okcdocprd007a:8080/datawatchvdd-frontend/workbook/#/RT%202%20Dashboard%20v0.33/Current%20Well%20Dashboard"),
-                    Visible = true
-                };
+                //var dataWatcher = new WebBrowser()
+                //{
+                //    Dock = DockStyle.Fill,
+                //    Url = new System.Uri("http://okcdocprd007a:8080/datawatchvdd-frontend/workbook/#/RT%202%20Dashboard%20v0.33/Current%20Well%20Dashboard"),
+                //    Visible = true
+                //};
 
 
                 //Add controls to the top panel
-                //topPanel.Controls.Add(distlabel);
-                //topPanel.Controls.Add(welllabel);
+                topPanel.Controls.Add(distlabel);
+                topPanel.Controls.Add(welllabel);
 
                 //Add all panel to the well panel
-                //wellPanel.Controls.Add(topPanel);
-                if(wellPanel.Name == "wellPanelFAITH-TORO DIM M5H")
-                    wellPanel.Controls.Add(dataWatcher);
+                wellPanel.Controls.Add(topPanel);
+                //if(wellPanel.Name == "wellPanelFAITH-TORO DIM M5H")
+                //    wellPanel.Controls.Add(dataWatcher);
                 wellPanel.Paint += DropShadow;
 
                 //Add well panel to main flow panel
-                this.pnl_Main.Controls.Add(wellPanel);
+                gridPanel.Controls.Add(wellPanel);
             }
           
         }
@@ -152,7 +164,20 @@ namespace Drill_UI
         //Enable flowpanel focus when enter to allow scrolling with mouse
         private void pnl_Main_MouseEnter(object sender, EventArgs e)
         {
-            pnl_Main.Focus();
+            this.panelMain.Focus();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            //if (checkBox1.Checked)
+            //{
+            //    panelMain.gridPanel.Visible = false;
+            //}
+            //else
+            //{
+            //    pnl_Main.Visible = true;
+            //}
         }
     }
 }

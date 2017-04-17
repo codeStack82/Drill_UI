@@ -74,8 +74,10 @@
             this.ss_Main = new System.Windows.Forms.StatusStrip();
             this.pnl_Left = new System.Windows.Forms.Panel();
             this.pnl_TopMain = new System.Windows.Forms.Panel();
-            this.pnl_Main = new System.Windows.Forms.FlowLayoutPanel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.mnu_Main.SuspendLayout();
+            this.pnl_Left.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnu_Main
@@ -91,7 +93,7 @@
             this.mnu_Main.Location = new System.Drawing.Point(0, 0);
             this.mnu_Main.Name = "mnu_Main";
             this.mnu_Main.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
-            this.mnu_Main.Size = new System.Drawing.Size(1794, 24);
+            this.mnu_Main.Size = new System.Drawing.Size(1664, 24);
             this.mnu_Main.TabIndex = 1;
             this.mnu_Main.Text = "menuStrip1";
             // 
@@ -408,10 +410,10 @@
             // ss_Main
             // 
             this.ss_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.ss_Main.Location = new System.Drawing.Point(0, 1240);
+            this.ss_Main.Location = new System.Drawing.Point(0, 816);
             this.ss_Main.Name = "ss_Main";
             this.ss_Main.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.ss_Main.Size = new System.Drawing.Size(1794, 22);
+            this.ss_Main.Size = new System.Drawing.Size(1664, 22);
             this.ss_Main.TabIndex = 3;
             this.ss_Main.Text = "statusStrip1";
             // 
@@ -421,9 +423,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.pnl_Left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Left.Controls.Add(this.checkBox1);
             this.pnl_Left.Location = new System.Drawing.Point(0, 65);
             this.pnl_Left.Name = "pnl_Left";
-            this.pnl_Left.Size = new System.Drawing.Size(203, 1170);
+            this.pnl_Left.Size = new System.Drawing.Size(203, 750);
             this.pnl_Left.TabIndex = 4;
             // 
             // pnl_TopMain
@@ -435,33 +438,43 @@
             this.pnl_TopMain.Location = new System.Drawing.Point(0, 12);
             this.pnl_TopMain.Name = "pnl_TopMain";
             this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_TopMain.Size = new System.Drawing.Size(1794, 55);
+            this.pnl_TopMain.Size = new System.Drawing.Size(1664, 55);
             this.pnl_TopMain.TabIndex = 5;
             // 
-            // pnl_Main
+            // checkBox1
             // 
-            this.pnl_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBox1.Location = new System.Drawing.Point(11, 8);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(113, 20);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Grid Visable";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // panelMain
+            // 
+            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_Main.AutoScroll = true;
-            this.pnl_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.pnl_Main.Location = new System.Drawing.Point(209, 74);
-            this.pnl_Main.Margin = new System.Windows.Forms.Padding(6);
-            this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Padding = new System.Windows.Forms.Padding(6);
-            this.pnl_Main.Size = new System.Drawing.Size(1581, 1161);
-            this.pnl_Main.TabIndex = 6;
-            this.pnl_Main.MouseEnter += new System.EventHandler(this.pnl_Main_MouseEnter);
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panelMain.Location = new System.Drawing.Point(209, 74);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(5);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Padding = new System.Windows.Forms.Padding(5);
+            this.panelMain.Size = new System.Drawing.Size(1455, 737);
+            this.panelMain.TabIndex = 7;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1794, 1262);
+            this.ClientSize = new System.Drawing.Size(1664, 838);
             this.Controls.Add(this.ss_Main);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.mnu_Main);
-            this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.pnl_TopMain);
             this.Controls.Add(this.pnl_Left);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -473,6 +486,8 @@
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.mnu_Main.ResumeLayout(false);
             this.mnu_Main.PerformLayout();
+            this.pnl_Left.ResumeLayout(false);
+            this.pnl_Left.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,7 +539,8 @@
         private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem volumesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timesToolStripMenuItem;
-        private System.Windows.Forms.FlowLayoutPanel pnl_Main;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel panelMain;
     }
 }
 
