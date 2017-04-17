@@ -73,11 +73,9 @@
             this.aboutOpsViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ss_Main = new System.Windows.Forms.StatusStrip();
             this.pnl_Left = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_TopMain = new System.Windows.Forms.Panel();
             this.pnl_Main = new System.Windows.Forms.FlowLayoutPanel();
             this.mnu_Main.SuspendLayout();
-            this.pnl_Left.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnu_Main
@@ -409,7 +407,7 @@
             // 
             // ss_Main
             // 
-            this.ss_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.ss_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ss_Main.Location = new System.Drawing.Point(0, 1240);
             this.ss_Main.Name = "ss_Main";
             this.ss_Main.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
@@ -423,20 +421,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.pnl_Left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_Left.Controls.Add(this.panel1);
             this.pnl_Left.Location = new System.Drawing.Point(0, 65);
             this.pnl_Left.Name = "pnl_Left";
-            this.pnl_Left.Size = new System.Drawing.Size(204, 1171);
+            this.pnl_Left.Size = new System.Drawing.Size(203, 1172);
             this.pnl_Left.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 1117);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 52);
-            this.panel1.TabIndex = 0;
             // 
             // pnl_TopMain
             // 
@@ -457,9 +445,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_Main.AutoScroll = true;
             this.pnl_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.pnl_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Main.Location = new System.Drawing.Point(209, 74);
+            this.pnl_Main.Margin = new System.Windows.Forms.Padding(6);
             this.pnl_Main.Name = "pnl_Main";
+            this.pnl_Main.Padding = new System.Windows.Forms.Padding(6);
             this.pnl_Main.Size = new System.Drawing.Size(1581, 1161);
             this.pnl_Main.TabIndex = 6;
             this.pnl_Main.MouseEnter += new System.EventHandler(this.pnl_Main_MouseEnter);
@@ -470,9 +459,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1794, 1262);
+            this.Controls.Add(this.ss_Main);
             this.Controls.Add(this.mnu_Main);
             this.Controls.Add(this.pnl_Main);
-            this.Controls.Add(this.ss_Main);
             this.Controls.Add(this.pnl_TopMain);
             this.Controls.Add(this.pnl_Left);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -484,7 +473,6 @@
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.mnu_Main.ResumeLayout(false);
             this.mnu_Main.PerformLayout();
-            this.pnl_Left.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,7 +524,6 @@
         private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem volumesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timesToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel pnl_Main;
     }
 }

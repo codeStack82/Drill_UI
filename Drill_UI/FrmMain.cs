@@ -25,6 +25,15 @@ namespace Drill_UI
         //Form Load  method
         private void frm_Main_Load(object sender, EventArgs e)
         {
+            //Dark Theme Color List
+            var main = Color.FromArgb(33, 33, 33);
+            var mainBC = Color.FromArgb(48, 48, 48);
+            var gridBC = Color.FromArgb(100,100,100);
+            var smallGridBC = Color.FromArgb(240, 240, 240);
+            var darkText = Color.FromArgb(85, 85, 85);
+            var lightText = Color.FromArgb(240,240,240);
+
+
             var wellList = new List<string>() {"FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H" };
             var distList = new List<string>() { "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST" };
 
@@ -35,7 +44,7 @@ namespace Drill_UI
                 var wellPanel = new Panel()
                 {
                     Name = "wellPanel" + wellList[i] ,
-                    BackColor = SystemColors.ControlLightLight,
+                    BackColor = smallGridBC,
                     BorderStyle = BorderStyle.FixedSingle,
                     Size = new Size(500, 400),
                     Enabled = true,
@@ -45,10 +54,11 @@ namespace Drill_UI
                 var topPanel = new Panel()
                 {
                     Name = "topPanel" + wellList[i],
-                    BackColor = SystemColors.Highlight,
+                    BackColor = gridBC,
                     Dock = DockStyle.Top,
                     Height = 30,
-                    ForeColor = SystemColors.ControlLightLight,
+                    ForeColor = lightText,
+                    BorderStyle = BorderStyle.FixedSingle,
                     Padding = new Padding(5),
                     Margin = new Padding(5),
                     Enabled = true,
@@ -62,7 +72,7 @@ namespace Drill_UI
                     Name = "lbl_" + wellList[i],
                     Text = wellList[i],
                     Width = 175,
-                    ForeColor = SystemColors.ControlLightLight,
+                    ForeColor = lightText,
                     Location = new Point(330, 5)
                 };
 
@@ -71,6 +81,7 @@ namespace Drill_UI
                     Name = "lbl_" + distList[i],
                     Text = distList[i],
                     Width = 220,
+                    ForeColor = lightText,
                     Location = new Point(5, 5)
                 };
 
