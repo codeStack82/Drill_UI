@@ -27,10 +27,10 @@ namespace Drill_UI
         {
             //Dark Theme Color List
             var main = Color.FromArgb(33, 33, 33);
-            var mainBC = Color.FromArgb(48, 48, 48);
-            var gridBC = Color.FromArgb(100,100,100);
-            var smallGridBC = Color.FromArgb(240, 240, 240);
-            var darkText = Color.FromArgb(85, 85, 85);
+            var mainBc = Color.FromArgb(48, 48, 48);
+            var gridBc = Color.FromArgb(30,120,175);
+            var smallGridBc = Color.FromArgb(240, 240, 240);
+            var darkText = Color.FromArgb(66,66,66);
             var lightText = Color.FromArgb(240,240,240);
 
 
@@ -44,7 +44,7 @@ namespace Drill_UI
                 var wellPanel = new Panel()
                 {
                     Name = "wellPanel" + wellList[i] ,
-                    BackColor = smallGridBC,
+                    BackColor = smallGridBc,
                     BorderStyle = BorderStyle.FixedSingle,
                     Size = new Size(500, 400),
                     Enabled = true,
@@ -54,7 +54,7 @@ namespace Drill_UI
                 var topPanel = new Panel()
                 {
                     Name = "topPanel" + wellList[i],
-                    BackColor = gridBC,
+                    BackColor = gridBc,
                     Dock = DockStyle.Top,
                     Height = 30,
                     ForeColor = lightText,
