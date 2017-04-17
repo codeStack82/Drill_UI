@@ -409,6 +409,7 @@
             // 
             // ss_Main
             // 
+            this.ss_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.ss_Main.Location = new System.Drawing.Point(0, 1240);
             this.ss_Main.Name = "ss_Main";
             this.ss_Main.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
@@ -420,33 +421,33 @@
             // 
             this.pnl_Left.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.pnl_Left.BackColor = System.Drawing.Color.White;
+            this.pnl_Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.pnl_Left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Left.Controls.Add(this.panel1);
-            this.pnl_Left.Location = new System.Drawing.Point(4, 27);
+            this.pnl_Left.Location = new System.Drawing.Point(0, 65);
             this.pnl_Left.Name = "pnl_Left";
-            this.pnl_Left.Size = new System.Drawing.Size(200, 1209);
+            this.pnl_Left.Size = new System.Drawing.Size(204, 1171);
             this.pnl_Left.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 1155);
+            this.panel1.Location = new System.Drawing.Point(0, 1117);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 52);
+            this.panel1.Size = new System.Drawing.Size(202, 52);
             this.panel1.TabIndex = 0;
             // 
             // pnl_TopMain
             // 
             this.pnl_TopMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_TopMain.BackColor = System.Drawing.Color.White;
+            this.pnl_TopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.pnl_TopMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_TopMain.Location = new System.Drawing.Point(210, 27);
+            this.pnl_TopMain.Location = new System.Drawing.Point(0, 12);
             this.pnl_TopMain.Name = "pnl_TopMain";
             this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_TopMain.Size = new System.Drawing.Size(1580, 40);
+            this.pnl_TopMain.Size = new System.Drawing.Size(1794, 55);
             this.pnl_TopMain.TabIndex = 5;
             // 
             // pnl_Main
@@ -455,11 +456,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_Main.AutoScroll = true;
-            this.pnl_Main.BackColor = System.Drawing.Color.Silver;
+            this.pnl_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.pnl_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_Main.Location = new System.Drawing.Point(210, 74);
+            this.pnl_Main.Location = new System.Drawing.Point(209, 74);
             this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(1580, 1161);
+            this.pnl_Main.Size = new System.Drawing.Size(1581, 1161);
             this.pnl_Main.TabIndex = 6;
             this.pnl_Main.MouseEnter += new System.EventHandler(this.pnl_Main_MouseEnter);
             // 
@@ -467,12 +468,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1794, 1262);
-            this.Controls.Add(this.pnl_Main);
-            this.Controls.Add(this.pnl_Left);
-            this.Controls.Add(this.ss_Main);
             this.Controls.Add(this.mnu_Main);
+            this.Controls.Add(this.pnl_Main);
+            this.Controls.Add(this.ss_Main);
             this.Controls.Add(this.pnl_TopMain);
+            this.Controls.Add(this.pnl_Left);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.mnu_Main;
             this.Margin = new System.Windows.Forms.Padding(4);
