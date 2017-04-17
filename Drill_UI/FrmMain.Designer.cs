@@ -423,7 +423,7 @@
             this.pnl_Left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Left.Location = new System.Drawing.Point(0, 65);
             this.pnl_Left.Name = "pnl_Left";
-            this.pnl_Left.Size = new System.Drawing.Size(203, 1172);
+            this.pnl_Left.Size = new System.Drawing.Size(203, 1170);
             this.pnl_Left.TabIndex = 4;
             // 
             // pnl_TopMain
