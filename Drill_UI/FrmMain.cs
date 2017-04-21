@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using Drill_UI.App_Controls;
 using Drill_UI.App_Forms;
-using Drill_UI.APP_Classes;
 
 namespace Drill_UI
 {
@@ -26,96 +26,38 @@ namespace Drill_UI
         private void frm_Main_Load(object sender, EventArgs e)
         {
 
-            //Dark Theme Color List
-            var main = Color.FromArgb(33, 33, 33);
-            var mainBc = Color.FromArgb(48, 48, 48);
-            var gridBc = Color.FromArgb(30,120,175);
-            var smallGridBc = Color.FromArgb(240, 240, 240);
-            var flowPanel= Color.FromArgb(66,66,66);
-            var lightText = Color.FromArgb(240,240,240);
+            //Create flowpanel for Active Wells and add to Main container
+            var activeWellsPanel = NewFlowPanel();
+            this.panelMain.Controls.Add(activeWellsPanel);
 
-            //Create Flow Panel
-            var gridPanel = new FlowLayoutPanel()
-            {
-                Name = "pnl_FlowMain",
-                BackColor = flowPanel,
-                BorderStyle = BorderStyle.FixedSingle,
-                Dock = DockStyle.Fill,
-                Visible = true
-            };
-            //Add grid panel
-            this.panelMain.Controls.Add(gridPanel);
+            var activeWells = new List<string> { "638275","655062","655945","645573","655999","649223","658418","658419","658420","657816","838481","658494","659018","657973","658389","659012","647746","653263","836402"};
+            var previewHours = 1;
 
+            MessageBox.Show(activeWells.Count + "" + previewHours);
 
-            var wellList = new List<string>() {"FAITH-TORO DIM M5H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H", "FAITH-TORO DIM M4H" };
-            var distList = new List<string>() { "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST", "EASTERN GULF COAST" };
-
-            for (var i = 0; i < wellList.Count; ++i)
+            for (var i = 0; i < activeWells.Count; ++i)
             {
 
                 //create well panel2
                 var wellPanel = new Panel()
                 {
-                    Name = "wellPanel" + wellList[i] ,
-                    BackColor = smallGridBc,
+                    Name = "wellPanel_" + activeWells[i],
+                    BackColor = Color.FromArgb(240, 240, 240),
                     BorderStyle = BorderStyle.FixedSingle,
-                    Size = new Size(500, 500),
+                    Size = new Size(500, 350),
                     Enabled = true,
                     Visible = true
                 };
 
-                var topPanel = new Panel()
+                var dataWatcher = new WebBrowser()
                 {
-                    Name = "topPanel" + wellList[i],
-                    BackColor = gridBc,
-                    Dock = DockStyle.Top,
-                    Height = 30,
-                    ForeColor = lightText,
-                    BorderStyle = BorderStyle.FixedSingle,
-                    Padding = new Padding(5),
-                    Margin = new Padding(5),
-                    Enabled = true,
+                    Dock = DockStyle.Fill,
+                    Url = new System.Uri("http://okcdocprd007a:8080/datawatchvdd-frontend/workbook/#/RSTest/Single%20Well%20Rig%20Sensors/params/%7B%22UidWell%22%3A%22" + activeWells[i] + "%22%2C%22HH%22%3A%22"+ previewHours + "%22%7D"),
                     Visible = true
                 };
 
-                //Create well panel components
-                var welllabel = new Label()
-                {
-                    Name = "lbl_" + wellList[i],
-                    Text = wellList[i],
-                    Width = 175,
-                    ForeColor = lightText,
-                    Location = new Point(330, 5)
-                };
-
-                var distlabel = new Label()
-                {
-                    Name = "lbl_" + distList[i],
-                    Text = distList[i],
-                    Width = 220,
-                    ForeColor = lightText,
-                    Location = new Point(5, 5)
-                };
-                //var dataWatcher = new WebBrowser()
-                //{
-                //    Dock = DockStyle.Fill,
-                //    Url = new System.Uri("http://okcdocprd007a:8080/datawatchvdd-frontend/workbook/#/RT%202%20Dashboard%20v0.33/Current%20Well%20Dashboard"),
-                //    Visible = true
-                //};
-
-
-                //Add controls to the top panel
-                topPanel.Controls.Add(distlabel);
-                topPanel.Controls.Add(welllabel);
-
-                //Add all panel to the well panel
-                wellPanel.Controls.Add(topPanel);
-                //if(wellPanel.Name == "wellPanelFAITH-TORO DIM M5H")
-                //    wellPanel.Controls.Add(dataWatcher);
-                wellPanel.Paint += DropShadow;
-
-                //Add well panel to main flow panel
-                gridPanel.Controls.Add(wellPanel);
+                wellPanel.Controls.Add(dataWatcher);
+                activeWellsPanel.Controls.Add(wellPanel);
             }
           
         }
@@ -131,53 +73,30 @@ namespace Drill_UI
         private void aboutOpsViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Create new about form and show when clicked
-            var aboutForm = new frm_About();
+            var aboutForm = new FrmAbout();
             aboutForm.Show();
       
         }
 
-        //Drop Shadow method
-        private static void DropShadow(object sender, PaintEventArgs e)
+    
+        //TODO: Enable gridPanel focus when mouseEnter to allow scrolling with mouse scroll whell
+      
+        
+        //Create custom grid panel
+        private static FlowLayoutPanel NewFlowPanel()
         {
-            Panel panel = (Panel)sender;
-            Color[] shadow = new Color[3];
-            shadow[0] = Color.FromArgb(211, 211, 211);
-            shadow[1] = Color.FromArgb(211, 211, 211);
-            shadow[2] = Color.FromArgb(211, 211, 211);
-            Pen pen = new Pen(shadow[0]);
-            using (pen)
+            //Create Flow Panel
+            var gridPanel = new FlowLayoutPanel()
             {
-                foreach (Panel p in panel.Controls.OfType<Panel>())
-                {
-                    Point pt = p.Location;
-                    pt.Y += p.Height;
-                    for (var sp = 0; sp < 3; sp++)
-                    {
-                        pen.Color = shadow[sp];
-                        e.Graphics.DrawLine(pen, pt.X, pt.Y, pt.X + p.Width - 1, pt.Y);
-                        pt.Y++;
-                    }
-                }
-            }
+                Name = "pnl_FlowMain",
+                BackColor = Color.FromArgb(66, 66, 66),
+                AutoScroll = true,
+                BorderStyle = BorderStyle.None,
+                Dock = DockStyle.Fill,
+                Visible = true
+            };
+            return gridPanel;
         }
 
-        //Enable flowpanel focus when enter to allow scrolling with mouse
-        private void pnl_Main_MouseEnter(object sender, EventArgs e)
-        {
-            this.panelMain.Focus();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-            //if (checkBox1.Checked)
-            //{
-            //    panelMain.gridPanel.Visible = false;
-            //}
-            //else
-            //{
-            //    pnl_Main.Visible = true;
-            //}
-        }
     }
 }

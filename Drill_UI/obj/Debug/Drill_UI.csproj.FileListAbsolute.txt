@@ -6,5 +6,7 @@ c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debu
 c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.csproj.GenerateResource.Cache
 c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.exe
 c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.pdb
-c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.App_Forms.frm_About.resources
 C:\Users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.FrmMain.resources
+C:\Users\thunt2\Documents\Visual Studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.App_Forms.FrmWellLog.resources
+C:\Users\thunt2\Documents\Visual Studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.App_Forms.FrmAbout.resources
+C:\Users\thunt2\Documents\Visual Studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.App_Controls.WellPanel.resources

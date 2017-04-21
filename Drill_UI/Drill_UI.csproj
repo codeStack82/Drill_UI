@@ -48,15 +48,26 @@
   <ItemGroup>
     <Compile Include="APP_Classes\Casing.cs" />
     <Compile Include="APP_Classes\Comment.cs" />
-    <Compile Include="APP_Classes\PanelUtility.cs" />
     <Compile Include="APP_Classes\Surveys.cs" />
     <Compile Include="APP_Classes\User.cs" />
     <Compile Include="APP_Classes\Wellbore.cs" />
-    <Compile Include="App_Forms\frm_About.cs">
+    <Compile Include="App_Controls\WellPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="App_Controls\WellPanel.Designer.cs">
+      <DependentUpon>WellPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Forms\FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App_Forms\frm_About.Designer.cs">
-      <DependentUpon>frm_About.cs</DependentUpon>
+    <Compile Include="App_Forms\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Forms\FrmWellLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Forms\FrmWellLog.Designer.cs">
+      <DependentUpon>FrmWellLog.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -66,8 +77,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="App_Forms\frm_About.resx">
-      <DependentUpon>frm_About.cs</DependentUpon>
+    <EmbeddedResource Include="App_Controls\WellPanel.resx">
+      <DependentUpon>WellPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\FrmWellLog.resx">
+      <DependentUpon>FrmWellLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

@@ -74,10 +74,8 @@
             this.ss_Main = new System.Windows.Forms.StatusStrip();
             this.pnl_Left = new System.Windows.Forms.Panel();
             this.pnl_TopMain = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panelMain = new System.Windows.Forms.Panel();
             this.mnu_Main.SuspendLayout();
-            this.pnl_Left.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnu_Main
@@ -409,7 +407,7 @@
             // 
             // ss_Main
             // 
-            this.ss_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.ss_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.ss_Main.Location = new System.Drawing.Point(0, 816);
             this.ss_Main.Name = "ss_Main";
             this.ss_Main.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
@@ -421,37 +419,23 @@
             // 
             this.pnl_Left.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.pnl_Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.pnl_Left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_Left.Controls.Add(this.checkBox1);
+            this.pnl_Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.pnl_Left.Location = new System.Drawing.Point(0, 65);
             this.pnl_Left.Name = "pnl_Left";
-            this.pnl_Left.Size = new System.Drawing.Size(203, 750);
+            this.pnl_Left.Size = new System.Drawing.Size(203, 751);
             this.pnl_Left.TabIndex = 4;
             // 
             // pnl_TopMain
             // 
             this.pnl_TopMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_TopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.pnl_TopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.pnl_TopMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_TopMain.Location = new System.Drawing.Point(0, 12);
+            this.pnl_TopMain.Location = new System.Drawing.Point(0, 0);
             this.pnl_TopMain.Name = "pnl_TopMain";
             this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_TopMain.Size = new System.Drawing.Size(1664, 55);
+            this.pnl_TopMain.Size = new System.Drawing.Size(1664, 67);
             this.pnl_TopMain.TabIndex = 5;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkBox1.Location = new System.Drawing.Point(11, 8);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(113, 20);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Grid Visable";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // panelMain
             // 
@@ -463,7 +447,7 @@
             this.panelMain.Margin = new System.Windows.Forms.Padding(5);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(5);
-            this.panelMain.Size = new System.Drawing.Size(1455, 737);
+            this.panelMain.Size = new System.Drawing.Size(1459, 737);
             this.panelMain.TabIndex = 7;
             // 
             // FrmMain
@@ -483,11 +467,10 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OpsView";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.mnu_Main.ResumeLayout(false);
             this.mnu_Main.PerformLayout();
-            this.pnl_Left.ResumeLayout(false);
-            this.pnl_Left.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,7 +522,6 @@
         private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem volumesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timesToolStripMenuItem;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Panel panelMain;
     }
 }

@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace Drill_UI.App_Forms
 {
-    partial class frm_About : Form
+    internal partial class FrmAbout : Form
     {
-        public frm_About()
+        public FrmAbout()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}", AssemblyTitle);
+            this.Text = $"About {AssemblyTitle}";
             this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
+            this.labelVersion.Text = $"Version {AssemblyVersion}";
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
@@ -103,6 +103,11 @@ namespace Drill_UI.App_Forms
         #endregion
 
         private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_About_Load(object sender, EventArgs e)
         {
 
         }
