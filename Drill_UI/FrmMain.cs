@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Net.Sockets;
+using System.Runtime.Remoting.Channels;
 using System.Security.Policy;
 using System.Text;
 using System.Threading;
@@ -37,6 +38,8 @@ namespace Drill_UI
          
             CreateActiveWellPanel();
 
+            
+
             this.panelMain.Controls.Add(activeWellsPanel);
 
         }
@@ -66,7 +69,7 @@ namespace Drill_UI
 
             var activeWells = new List<string> { "638275", "655945", "649223", "658418", "658419", "657816" };
             // var previewHours = 1;
-
+            //activeWells.Count
             for (var i = 0; i < activeWells.Count; ++i)
             {
 
@@ -93,14 +96,13 @@ namespace Drill_UI
                 wellPanel.Controls.Add(wellPanelUpper);
                 activeWellsPanel.Controls.Add(wellPanel);
                 
-
-                //Thread.Sleep(1000);
             }
 
         }
 
         private Panel createWellPanel(string pn)
         {
+
             var wellPanelMain = new Panel()
             {
                 Name = "wellPanel_Main" + pn,
@@ -120,7 +122,20 @@ namespace Drill_UI
                 Enabled = true,
                 Visible = true
             };
+          
+            var btn_FullView  = new Button()
+            {
+                Name = "btn_Lower_" + pn,
+                Location = new Point(5,8),
+                Font = new Font("Microsoft Sans Serif", 8.0f),
+                ForeColor = Color.FromArgb(250,250,250),
+                Text = "Full",
+                FlatStyle = FlatStyle.Flat
+            };
 
+            btn_FullView.Click += delegate { MessageBox.Show("PN: " + pn); };
+
+            wellPanelLower.Controls.Add(btn_FullView);
             wellPanelMain.Controls.Add(wellPanelLower);
             return wellPanelMain;
         }
