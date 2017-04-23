@@ -152,18 +152,6 @@ namespace Drill_UI
             return gridPanel;
         }
 
-        private void pb_Menu_MouseEnter(object sender, EventArgs e)
-        {
-            var slideOut = new Point(0,0);
-            pnl_Left.Location = slideOut;
-        }
-
-        private void pb_Menu_MouseLeave(object sender, EventArgs e)
-        {
-            var slideIn = new Point(-150, 0);
-            pnl_Left.Location = slideIn;
-        }
-
         private void pnl_Left_MouseEnter(object sender, EventArgs e)
         {
             var slideOut = new Point(0, 0);

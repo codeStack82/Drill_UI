@@ -94,7 +94,7 @@
             this.mnu_Main.Location = new System.Drawing.Point(0, 0);
             this.mnu_Main.Name = "mnu_Main";
             this.mnu_Main.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
-            this.mnu_Main.Size = new System.Drawing.Size(1664, 24);
+            this.mnu_Main.Size = new System.Drawing.Size(1889, 24);
             this.mnu_Main.TabIndex = 1;
             this.mnu_Main.Text = "menuStrip1";
             // 
@@ -411,10 +411,10 @@
             // ss_Main
             // 
             this.ss_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.ss_Main.Location = new System.Drawing.Point(0, 816);
+            this.ss_Main.Location = new System.Drawing.Point(0, 910);
             this.ss_Main.Name = "ss_Main";
             this.ss_Main.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.ss_Main.Size = new System.Drawing.Size(1664, 22);
+            this.ss_Main.Size = new System.Drawing.Size(1889, 22);
             this.ss_Main.TabIndex = 3;
             this.ss_Main.Text = "statusStrip1";
             // 
@@ -426,7 +426,7 @@
             this.pnl_Left.Controls.Add(this.pb_Menu);
             this.pnl_Left.Location = new System.Drawing.Point(0, 0);
             this.pnl_Left.Name = "pnl_Left";
-            this.pnl_Left.Size = new System.Drawing.Size(200, 838);
+            this.pnl_Left.Size = new System.Drawing.Size(200, 932);
             this.pnl_Left.TabIndex = 4;
             this.pnl_Left.MouseEnter += new System.EventHandler(this.pnl_Left_MouseEnter);
             this.pnl_Left.MouseLeave += new System.EventHandler(this.pnl_Left_MouseLeave);
@@ -440,8 +440,6 @@
             this.pb_Menu.Size = new System.Drawing.Size(34, 32);
             this.pb_Menu.TabIndex = 0;
             this.pb_Menu.TabStop = false;
-            this.pb_Menu.MouseEnter += new System.EventHandler(this.pb_Menu_MouseEnter);
-            this.pb_Menu.MouseLeave += new System.EventHandler(this.pb_Menu_MouseLeave);
             // 
             // pnl_TopMain
             // 
@@ -452,7 +450,7 @@
             this.pnl_TopMain.Location = new System.Drawing.Point(0, 12);
             this.pnl_TopMain.Name = "pnl_TopMain";
             this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_TopMain.Size = new System.Drawing.Size(1664, 55);
+            this.pnl_TopMain.Size = new System.Drawing.Size(1889, 55);
             this.pnl_TopMain.TabIndex = 5;
             // 
             // panelMain
@@ -465,7 +463,7 @@
             this.panelMain.Margin = new System.Windows.Forms.Padding(5);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(5);
-            this.panelMain.Size = new System.Drawing.Size(1609, 737);
+            this.panelMain.Size = new System.Drawing.Size(1834, 831);
             this.panelMain.TabIndex = 7;
             // 
             // FrmMain
@@ -473,7 +471,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1664, 838);
+            this.ClientSize = new System.Drawing.Size(1889, 932);
             this.Controls.Add(this.ss_Main);
             this.Controls.Add(this.mnu_Main);
             this.Controls.Add(this.pnl_TopMain);
