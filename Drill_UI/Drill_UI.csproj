@@ -51,12 +51,6 @@
     <Compile Include="APP_Classes\Surveys.cs" />
     <Compile Include="APP_Classes\User.cs" />
     <Compile Include="APP_Classes\Wellbore.cs" />
-    <Compile Include="App_Controls\WellPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="App_Controls\WellPanel.Designer.cs">
-      <DependentUpon>WellPanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="App_Forms\FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,9 +75,6 @@
     <Compile Include="APP_Classes\wellPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="App_Controls\WellPanel.resx">
-      <DependentUpon>WellPanel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +108,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Controls\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

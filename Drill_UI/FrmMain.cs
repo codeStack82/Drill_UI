@@ -13,7 +13,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
-using Drill_UI.App_Controls;
 using Drill_UI.App_Forms;
 using Drill_UI.APP_Classes;
 
@@ -37,9 +36,6 @@ namespace Drill_UI
             //var well = new Well("Test" ,"654955");
          
             CreateActiveWellPanel();
-
-            
-
             this.panelMain.Controls.Add(activeWellsPanel);
 
         }
@@ -102,7 +98,6 @@ namespace Drill_UI
 
         private Panel createWellPanel(string pn)
         {
-
             var wellPanelMain = new Panel()
             {
                 Name = "wellPanel_Main" + pn,
@@ -112,7 +107,7 @@ namespace Drill_UI
                 Enabled = true,
                 Visible = true
             };
-            //create well panel
+
             var wellPanelLower = new Panel()
             {
                 Name = "wellPanel_Lower" + pn,
@@ -122,20 +117,44 @@ namespace Drill_UI
                 Enabled = true,
                 Visible = true
             };
-          
-            var btn_FullView  = new Button()
+
+            var alarmPanel = new Panel()
+            {
+                Name = "alarmPanel_" + pn,
+                BackColor = Color.DarkGray,
+                BorderStyle = BorderStyle.FixedSingle,
+                Location = new Point(100,8),
+                Size = new Size(400, 25)
+
+            };
+            alarmPanel.MouseEnter += delegate
+            {
+                alarmPanel.BackColor = Color.DarkRed;
+            };
+            alarmPanel.MouseLeave += delegate
+            {
+                alarmPanel.BackColor = Color.DarkGray;
+            };
+
+            var btnFullView  = new Button()
             {
                 Name = "btn_Lower_" + pn,
                 Location = new Point(5,8),
                 Font = new Font("Microsoft Sans Serif", 8.0f),
                 ForeColor = Color.FromArgb(250,250,250),
                 Text = "Full",
+                Width = 40,
                 FlatStyle = FlatStyle.Flat
             };
 
-            btn_FullView.Click += delegate { MessageBox.Show("PN: " + pn); };
+            btnFullView.Click += delegate
+            {
+                MessageBox.Show("PN: " + pn + "\nGood Job, You can click a button!");
+            };
 
-            wellPanelLower.Controls.Add(btn_FullView);
+
+            wellPanelLower.Controls.Add(alarmPanel);
+            wellPanelLower.Controls.Add(btnFullView);
             wellPanelMain.Controls.Add(wellPanelLower);
             return wellPanelMain;
         }
@@ -170,6 +189,7 @@ namespace Drill_UI
         private void pnl_Left_MouseEnter(object sender, EventArgs e)
         {
             var slideOut = new Point(0, 0);
+            Thread.Sleep(150);
             pnl_Left.Location = slideOut;
         }
 

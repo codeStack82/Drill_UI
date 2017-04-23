@@ -9,4 +9,3 @@ c:\users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debu
 C:\Users\thunt2\documents\visual studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.FrmMain.resources
 C:\Users\thunt2\Documents\Visual Studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.App_Forms.FrmWellLog.resources
 C:\Users\thunt2\Documents\Visual Studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.App_Forms.FrmAbout.resources
-C:\Users\thunt2\Documents\Visual Studio 2015\Projects\Drill_UI\Drill_UI\obj\Debug\Drill_UI.App_Controls.WellPanel.resources
