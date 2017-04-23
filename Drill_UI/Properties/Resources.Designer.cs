@@ -59,5 +59,15 @@ namespace Drill_UI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1485296223_menu_alt {
+            get {
+                object obj = ResourceManager.GetObject("1485296223_menu-alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

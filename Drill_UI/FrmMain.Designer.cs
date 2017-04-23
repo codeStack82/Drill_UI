@@ -73,9 +73,12 @@
             this.aboutOpsViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ss_Main = new System.Windows.Forms.StatusStrip();
             this.pnl_Left = new System.Windows.Forms.Panel();
+            this.pb_Menu = new System.Windows.Forms.PictureBox();
             this.pnl_TopMain = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.mnu_Main.SuspendLayout();
+            this.pnl_Left.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Menu)).BeginInit();
             this.SuspendLayout();
             // 
             // mnu_Main
@@ -420,10 +423,25 @@
             this.pnl_Left.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.pnl_Left.Location = new System.Drawing.Point(0, 65);
+            this.pnl_Left.Controls.Add(this.pb_Menu);
+            this.pnl_Left.Location = new System.Drawing.Point(0, 0);
             this.pnl_Left.Name = "pnl_Left";
-            this.pnl_Left.Size = new System.Drawing.Size(203, 751);
+            this.pnl_Left.Size = new System.Drawing.Size(200, 838);
             this.pnl_Left.TabIndex = 4;
+            this.pnl_Left.MouseEnter += new System.EventHandler(this.pnl_Left_MouseEnter);
+            this.pnl_Left.MouseLeave += new System.EventHandler(this.pnl_Left_MouseLeave);
+            // 
+            // pb_Menu
+            // 
+            this.pb_Menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_Menu.Image = global::Drill_UI.Properties.Resources._1485296223_menu_alt;
+            this.pb_Menu.Location = new System.Drawing.Point(156, 74);
+            this.pb_Menu.Name = "pb_Menu";
+            this.pb_Menu.Size = new System.Drawing.Size(34, 32);
+            this.pb_Menu.TabIndex = 0;
+            this.pb_Menu.TabStop = false;
+            this.pb_Menu.MouseEnter += new System.EventHandler(this.pb_Menu_MouseEnter);
+            this.pb_Menu.MouseLeave += new System.EventHandler(this.pb_Menu_MouseLeave);
             // 
             // pnl_TopMain
             // 
@@ -431,10 +449,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_TopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.pnl_TopMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_TopMain.Location = new System.Drawing.Point(0, 0);
+            this.pnl_TopMain.Location = new System.Drawing.Point(0, 12);
             this.pnl_TopMain.Name = "pnl_TopMain";
             this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_TopMain.Size = new System.Drawing.Size(1664, 67);
+            this.pnl_TopMain.Size = new System.Drawing.Size(1664, 55);
             this.pnl_TopMain.TabIndex = 5;
             // 
             // panelMain
@@ -443,11 +461,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.panelMain.Location = new System.Drawing.Point(209, 74);
+            this.panelMain.Location = new System.Drawing.Point(58, 74);
             this.panelMain.Margin = new System.Windows.Forms.Padding(5);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(5);
-            this.panelMain.Size = new System.Drawing.Size(1459, 737);
+            this.panelMain.Size = new System.Drawing.Size(1609, 737);
             this.panelMain.TabIndex = 7;
             // 
             // FrmMain
@@ -457,10 +475,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1664, 838);
             this.Controls.Add(this.ss_Main);
-            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.mnu_Main);
             this.Controls.Add(this.pnl_TopMain);
             this.Controls.Add(this.pnl_Left);
+            this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.mnu_Main;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -471,6 +489,8 @@
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.mnu_Main.ResumeLayout(false);
             this.mnu_Main.PerformLayout();
+            this.pnl_Left.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Menu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,6 +543,7 @@
         private System.Windows.Forms.ToolStripMenuItem volumesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timesToolStripMenuItem;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.PictureBox pb_Menu;
     }
 }
 

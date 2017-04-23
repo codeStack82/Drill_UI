@@ -77,6 +77,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="APP_Classes\Well.cs" />
+    <Compile Include="APP_Classes\wellPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="App_Controls\WellPanel.resx">
       <DependentUpon>WellPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +120,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1485296223_menu-alt.ico" />
     <Content Include="Resources\Admin.txt" />
     <Content Include="Resources\Users.txt" />
   </ItemGroup>
