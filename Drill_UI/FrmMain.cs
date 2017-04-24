@@ -40,7 +40,7 @@ namespace Drill_UI
             var activeWellsPanel = NewFlowPanel();
 
 
-            var activeWells = new List<string> { "638275", "655945", "649223", "658418", "658419", "657816", "655998", "658419", "647746" };
+            var activeWells = new List<string> {"638275", "655945", "649223", "658418", "658419", "657816"};//, "655998", "658419", "647746" };
 
             //create each well panel and add to the active wells panel
             foreach (var w in activeWells)
