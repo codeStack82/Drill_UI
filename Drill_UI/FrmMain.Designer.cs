@@ -94,7 +94,7 @@
             this.mnu_Main.Location = new System.Drawing.Point(0, 0);
             this.mnu_Main.Name = "mnu_Main";
             this.mnu_Main.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
-            this.mnu_Main.Size = new System.Drawing.Size(1889, 24);
+            this.mnu_Main.Size = new System.Drawing.Size(1904, 24);
             this.mnu_Main.TabIndex = 1;
             this.mnu_Main.Text = "menuStrip1";
             // 
@@ -414,7 +414,7 @@
             this.ss_Main.Location = new System.Drawing.Point(0, 910);
             this.ss_Main.Name = "ss_Main";
             this.ss_Main.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.ss_Main.Size = new System.Drawing.Size(1889, 22);
+            this.ss_Main.Size = new System.Drawing.Size(1904, 22);
             this.ss_Main.TabIndex = 3;
             this.ss_Main.Text = "statusStrip1";
             // 
@@ -450,7 +450,7 @@
             this.pnl_TopMain.Location = new System.Drawing.Point(0, 12);
             this.pnl_TopMain.Name = "pnl_TopMain";
             this.pnl_TopMain.Padding = new System.Windows.Forms.Padding(3);
-            this.pnl_TopMain.Size = new System.Drawing.Size(1889, 55);
+            this.pnl_TopMain.Size = new System.Drawing.Size(1904, 55);
             this.pnl_TopMain.TabIndex = 5;
             // 
             // panelMain
@@ -463,7 +463,7 @@
             this.panelMain.Margin = new System.Windows.Forms.Padding(5);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(5);
-            this.panelMain.Size = new System.Drawing.Size(1834, 831);
+            this.panelMain.Size = new System.Drawing.Size(1849, 831);
             this.panelMain.TabIndex = 7;
             // 
             // FrmMain
@@ -471,7 +471,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1889, 932);
+            this.ClientSize = new System.Drawing.Size(1904, 932);
             this.Controls.Add(this.ss_Main);
             this.Controls.Add(this.mnu_Main);
             this.Controls.Add(this.pnl_TopMain);
